@@ -16,12 +16,52 @@
 h1{
    display: inline-block; 
 }
+.fox{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+.cfd{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+.trad{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+.edu{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+.abt{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+.fox:hover{
+    color: blue;
+}
+.cfd:hover{
+    color: rgb(255, 0, 76);
+}
+.trad:hover{
+    color: green;
+}
+.edu:hover{
+    color: aqua;
+}
+.abt:hover{
+    color: purple;
+}
 .ul-lists{
     padding: 10px;
     font-weight: 70px;
     font-size: 16px;
     color: black;
-    gap: 3px;
+    gap: 5px;
 }
 .navbutton{
     background-color: #304438;
@@ -102,7 +142,7 @@ a{
 
 footer{
     position: relative;
-    background-color: #140b5c;
+    background-color: #24613c;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -131,10 +171,12 @@ footer.content.top{
 footer .content .logo-details{
     color: #fff;
     font-size: 30px;
+
 }
 footer .content .media-icons{
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 footer.content.media-icons a{
     height: 40px;
@@ -149,6 +191,7 @@ footer.content.media-icons a{
     text-decoration: none;
     transition: all 0.4s ease;
 }
+/*
 footer.content.link-boxes{
     display: flex;
     flex-wrap: wrap;
@@ -156,6 +199,16 @@ footer.content.link-boxes{
     gap: 20px;
     margin-top: 20px;
 }
+    */
+    .logo_name{
+        justify-content: center;
+    }
+    .link-boxes{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 3px;
+    }
 footer .content .link-boxes .box{
     flex: 1 1 150px;
     min-width: 120px;
@@ -186,7 +239,7 @@ footer .content .link-boxes .input-box input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background: #140B5C;
+    background: #7ebb96;
     border: 2px solid #afafb6;
     border-radius: 4px;
     color: #fff;
@@ -252,21 +305,33 @@ opacity: 0.8;
         font-size: 14px;
     }
 }
-@media (max-width:500px){
-    footer .content{
-        padding: 20px;
+
+
+/* Style for the dollar sign bubble */
+.dollar-sign {
+    position: absolute;
+    background-color: rgba(0, 255, 0, 0.6); /* Light green for bubble */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%; /* Make it round */
+    padding: 15px;
+    text-align: center;
+    animation: floatBubble 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Bubble floating animation */
+@keyframes floatBubble {
+    0% {
+        transform: translateY(0) scale(1);
     }
-    footer .content .link-boxes .box{
-        width: 100%;
-        text-align: center;
+    50% {
+        transform: translateY(-100px) scale(1.2);
     }
-    footer .button-details{
-        text-align: center;
-    }
-    .button-details .button_text span, .button-details .button_text a{
-        font-size: 12px;
+    100% {
+        transform: translateY(0) scale(1);
     }
 }
-.box{
-    list-style: none;
-}
+
+
